@@ -1,0 +1,7 @@
+Basic introduction to Go (Golang) and its features
+
+Installation of Go and setting up the environment
+
+Overview of the fmt package and its usage
+
+Understanding variables, data types, and loops in Go
