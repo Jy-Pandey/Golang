@@ -10,5 +10,15 @@ Updates : Jyoti pandey
 2. understood type conversions in Go, including type casting and using strconv for strings, integers, and floats.
 3. understood time handling using time.Now(), Format(), Parse() and time.Sleep().
 4. learned the difference between new and make for memory allocation in Go.
-5. understood arrays and pointers and its referencing concept
+5. understood arrays, pointers and its referencing concept
 5. understood working of slice, their relationship with arrays, length, capacity, append and deletion in slice.
+
+Day - 3
+Updates: Jyoti Pandey
+1. Learned how to use maps and structs to store and group data.
+2. Practiced if-else and switch conditions.
+3. Understood functions — including variadic functions, anonymous functions, named returns, and basic function usage.
+4. Understood what methods are and how they work with structs.
+5. Learned how defer is used to run code at the end, like closing a file.
+6. Practiced file handling – how to create, read, write, update, add data, and delete files.
+7. Started learning about web requests using the net/http package.

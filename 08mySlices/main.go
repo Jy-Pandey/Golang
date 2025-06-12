@@ -49,5 +49,4 @@ func main() {
 	idx := 3
 	sl3 = append(sl3[:idx], sl3[idx+1:]...)
 	fmt.Println("sl3 is after deletion is ", sl3)
-
 }

@@ -26,7 +26,7 @@ func main() {
 	// fmt.Println("Done!")
 
 	input := "11-06-2025"
-	parsedTime, err := time.Parse("01-02-2006", input)
+	parsedTime, err := time.Parse("01-02-2006", input) // convert in Time object so you can perform related operations like Add
 
 	if err != nil {
 		fmt.Println("Error:", err)

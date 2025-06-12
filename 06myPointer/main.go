@@ -6,7 +6,7 @@ func main() {
 	fmt.Println("Learn Pointers")
 
 	var ptr *int
-	fmt.Println("Value of pointer is : ", ptr)
+	fmt.Println("Default Value of pointer is : ", ptr)
 	// fmt.Println("Value of pointer is : ", *ptr)
 
 	num := 23

@@ -2,6 +2,13 @@ package main
 
 import "fmt"
 
+// Allowed
+var num = 2
+var num2 int = 5
+
+// Not Allowed
+// num3 := 5
+
 func main() {
 	fmt.Println("variables")
 	var username string = "Jyoti"
@@ -26,4 +33,13 @@ func main() {
 	var defStr string
 	fmt.Println("Default Val : ", defStr)
 	fmt.Printf("Type of variable is : %T \n", defStr)
+
+	// implicit type
+	var website = "AppPerfect.com"
+	fmt.Println(website)
+	// website = 5 // Wrong
+
+	// This syntax is only allowed inside a fuction or method
+	marks := 80
+	fmt.Println("Marks is :", marks)
 }
