@@ -22,3 +22,12 @@ Updates: Jyoti Pandey
 5. Learned how defer is used to run code at the end, like closing a file.
 6. Practiced file handling – how to create, read, write, update, add data, and delete files.
 7. Started learning about web requests using the net/http package.
+
+Day - 4
+Updates: Jyoti Pandey
+1. Learned how to extract info from URLs (scheme, host, query params)
+2. Made GET and POST HTTP requests in Go
+3. Sent form data using url.Values{}
+4. Sent JSON data using json.Marshal
+5. Learned how to encode, decode JSON data
+6. Started using PostgreSQL for REST APIs in Go
