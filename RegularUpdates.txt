@@ -31,3 +31,19 @@ Updates: Jyoti Pandey
 4. Sent JSON data using json.Marshal
 5. Learned how to encode, decode JSON data
 6. Started using PostgreSQL for REST APIs in Go
+
+go get github.com/gin-gonic/gin
+go get gorm.io/gorm
+go get gorm.io/driver/postgres
+go get go.uber.org/fx
+go get go.uber.org/fx@latest
+go get golang.org/x/crypto/sha3@latest
+
+Fx : Automatic dependebcy injector
+
+Day - 5
+1. Learned how to build REST API using Gin framework (CRUD operations with PostgreSQL).
+2. Understood Fx framework for Dependency Injection with a working example.
+3. Understood Interfaces in Go – how they work.
+4. Started learning OpenAPI Specification – how to document APIs using Swagger UI.
+

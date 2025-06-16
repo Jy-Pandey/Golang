@@ -1,0 +1,33 @@
+openapi: 3.0.0
+info:
+  title: Bookstore API
+  version: 1.0.0
+  description: Simple API to manage books
+
+servers:
+  - url: http://localhost:8080
+
+paths:
+  /books:
+    get:
+      summary: Get all books
+      description: Returns a list of books
+      responses:
+        '200':
+          description: A list of books
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Book'
+
+components:
+  schemas:
+    Book:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
