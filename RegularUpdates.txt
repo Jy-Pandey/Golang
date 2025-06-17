@@ -38,6 +38,7 @@ go get gorm.io/driver/postgres
 go get go.uber.org/fx
 go get go.uber.org/fx@latest
 go get golang.org/x/crypto/sha3@latest
+go mod tidy // Go fetch all required dependencies 
 
 Fx : Automatic dependebcy injector
 
@@ -47,3 +48,11 @@ Day - 5
 3. Understood Interfaces in Go – how they work.
 4. Started learning OpenAPI Specification – how to document APIs using Swagger UI.
 
+For integrating swagger UI
+download -  https://github.com/swagger-api/swagger-ui/archive/refs/heads/master.zip
+Extract the ZIP file → open the folder swagger-ui-master/dist
+Copy the entire dist folder to your project inside static folder and rename it with swagger-ui
+in index file - replace this url: "https://petstore.swagger.io/v2/swagger.json", 
+with url: "/openapi.yaml",
+Now it tells Swagger UI:
+“Load the OpenAPI documentation from our own file at http://localhost:8080/openapi.yaml”
