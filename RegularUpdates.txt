@@ -56,3 +56,8 @@ in index file - replace this url: "https://petstore.swagger.io/v2/swagger.json",
 with url: "/openapi.yaml",
 Now it tells Swagger UI:
 “Load the OpenAPI documentation from our own file at http://localhost:8080/openapi.yaml”
+
+Day - 6
+1. Learned how to write OpenAPI specification in YAML format to describe REST APIs properly.
+2. Learned how to use Swagger UI to show and test API routes in the browser.
+3. Created a Bookstore project with CRUD operations using Gin, PostgreSQL, and used Dependency Injection to organize the code better.
