@@ -61,3 +61,11 @@ Day - 6
 1. Learned how to write OpenAPI specification in YAML format to describe REST APIs properly.
 2. Learned how to use Swagger UI to show and test API routes in the browser.
 3. Created a Bookstore project with CRUD operations using Gin, PostgreSQL, and used Dependency Injection to organize the code better.
+
+Day-7
+1. Learned what goroutines are and how they help in concurrency and parallelism in Go.
+2. Used sync package tools like WaitGroup, Mutex, and channels to manage multiple goroutines safely.
+3. Learned about race conditions and how to stop them using Mutex.
+4. Revised how JOIN works in PostgreSQL.
+5. Started learning about project folder structure and its parts like configure, models, handlers, services, repository, and routes.
+
