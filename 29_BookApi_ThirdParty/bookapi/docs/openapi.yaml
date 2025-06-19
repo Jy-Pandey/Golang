@@ -1,0 +1,148 @@
+openapi: 3.0.0
+info:
+  title: Book Api
+  version: 1.0.0
+  description: A simple API to manage books and get trending books
+servers:
+  - url: http://localhost:8080
+paths:
+  /books:
+    get:
+      summary: Get All Books
+      tags:
+        - Books
+      responses:
+        '200':
+          description: List of all books
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/Book'
+    post:
+      summary: create a book
+      tags:
+        - Books
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BookInput'
+      responses:
+        '201':
+          description: Book created succesfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Book'
+  /books/{id}:
+    get:
+      summary: Get book by ID
+      tags:
+        - Books
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the book
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Book found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Book'
+        '404':
+          description: Book not found
+    put:
+      summary: Update a book by ID
+      tags:
+        - Books
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the book to update
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BookInput'
+      responses:
+        '200':
+          description: Book updated successfully
+    delete:
+      summary: Delete a book by ID
+      tags:
+        - Books
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the book to delete
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Book deleted successfully
+  /top10books/:
+    post:
+      summary: Import top 10 books from dummyjson.components
+      tags:
+        - TopBooks
+      responses:
+        '200':
+          description: Top 10 books added to the database
+        '500':
+          description: Failed to fetch or store trending books
+      
+components:
+  schemas:
+    Book:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        author:
+          type: string
+        description:
+          type: string
+        price:
+          type: integer
+      example:
+        id: 1
+        title: Book1
+        author: Jyoti pandey
+        description: A book published on GO lang
+        price: 499.99
+    BookInput:
+      type: object
+      required:
+        - title
+        - author
+        - description
+        - price
+      properties:
+        title:
+          type: string
+        author:
+          type: string
+        description:
+          type: string
+        price:
+          type: number
+      example:
+        title: Go in Action
+        author: William Kennedy
+        description: A great Go book
+        price: 49.99
+

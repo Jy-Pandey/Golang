@@ -69,3 +69,16 @@ Day-7
 4. Revised how JOIN works in PostgreSQL.
 5. Started learning about project folder structure and its parts like configure, models, handlers, services, repository, and routes.
 
+Day-8 BookApi - Third party Api 
+1. Built a Book API using Go, Gin, and PostgreSQL with clean folder structure.
+2. Used Fx to manage dependencies like database and routes easily.
+3. Added trending books from an external API into our database.
+4. Set up a cron job to clear all books from the table every hour.
+5. Used Postman for testing and connected OpenAPI YAML to Swagger UI for documentation.
+
+
+temporal
+mug flows
+
+
+

@@ -1,0 +1,10 @@
+| Step | Clause         | Kaam kya karta hai                                    |
+| ---- | -------------- | ----------------------------------------------------- |
+| 1    | `FROM`         | Tables join karta hai ya base table choose karta hai. |
+| 2    | `JOIN`         | Agar koi join hai to tables ko join karta hai.        |
+| 3    | `WHERE`        | Row-level filtering karta hai (non-grouped).          |
+| 4    | `GROUP BY`     | Rows ko group karta hai.                              |
+| 5    | `HAVING`       | Grouped rows ko filter karta hai.                     |
+| 6    | `SELECT`       | Final output columns choose karta hai.                |
+| 7    | `ORDER BY`     | Result ko sort karta hai.                             |
+| 8    | `LIMIT/OFFSET` | (Agar use kiya ho to) result limit karta hai.         |
