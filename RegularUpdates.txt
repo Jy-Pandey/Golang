@@ -80,5 +80,12 @@ Day-8 BookApi - Third party Api
 temporal
 mug flows
 
+Day-9
+1. Created a Student-Course project with proper folder structure and wrote OpenAPI spec.
+2. Learned how to connect students and courses using a join table and used SQL joins to fetch enrolled course data.
+3. Started learning authentication using JWT tokens and how to securely store passwords with bcrypt.
+
+
+
 
 

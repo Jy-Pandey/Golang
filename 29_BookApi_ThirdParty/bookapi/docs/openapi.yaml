@@ -32,11 +32,8 @@ paths:
               $ref: '#/components/schemas/BookInput'
       responses:
         '201':
-          description: Book created succesfully
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Book'
+          # description: Book created succesfully
+          $ref: '#/components/responses/BookResponse'
   /books/{id}:
     get:
       summary: Get book by ID
@@ -51,11 +48,7 @@ paths:
             type: integer
       responses:
         '200':
-          description: Book found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Book'
+          $ref: '#/components/responses/BookResponse'
         '404':
           description: Book not found
     put:
@@ -104,6 +97,13 @@ paths:
           description: Failed to fetch or store trending books
       
 components:
+  responses:
+    BookResponse:
+      description: Single book returned
+      content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Book'
   schemas:
     Book:
       type: object
@@ -129,7 +129,7 @@ components:
       required:
         - title
         - author
-        - description
+        - description 
         - price
       properties:
         title:

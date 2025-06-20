@@ -30,6 +30,12 @@ func (r *StudentRepository) GetAllStudents() ([]models.Student, error) {
 	return students, err
 }
 
+func (r *StudentRepository) CheckStudentExists(studentID uint) bool {
+	var student models.Student
+	err := r.DB.First(&student, studentID).Error
+	return err == nil
+}
+
 // Enroll student in course
 func (r *StudentRepository) EnrollStudentInCourse(studentId, courseId uint) error {
 	enrollment := models.StudentCourse{

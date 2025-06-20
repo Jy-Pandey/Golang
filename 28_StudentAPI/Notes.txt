@@ -8,3 +8,32 @@
 | 6    | `SELECT`       | Final output columns choose karta hai.                |
 | 7    | `ORDER BY`     | Result ko sort karta hai.                             |
 | 8    | `LIMIT/OFFSET` | (Agar use kiya ho to) result limit karta hai.         |
+
+
+bookstore/
+│
+├── cmd/                  // Application entrypoint (main.go)
+│
+├── config/               // DB config
+│   └── config.go
+│
+├── models/               // Structs that represent DB models
+│   └── book.go
+│
+├── repository/           // Handles DB logic (SQL queries)
+│   └── book_repository.go
+│
+├── service/              // Business logic
+│   └── book_service.go
+│
+├── handler/              // API Handlers (controllers)
+│   └── book_handler.go
+│
+├── routes/               // Route definitions
+│   └── routes.go
+│
+├── docs/                 // OpenAPI YAML
+│   └── openapi.yaml
+│
+├── go.mod
+└── go.sum
