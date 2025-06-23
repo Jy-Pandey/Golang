@@ -17,5 +17,5 @@ func ConnectDatabase() *gorm.DB {
 	return db
 }
 func MigrateTables(db *gorm.DB) {
-	db.AutoMigrate(&models.Student{}, &models.Course{}, &models.StudentCourse{})
+	db.AutoMigrate(&models.Student{}, &models.Course{}, &models.StudentCourse{}, &models.User{})
 }

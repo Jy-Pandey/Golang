@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+
+	"studentApi/auth"
 	"studentApi/config"
 	"studentApi/handler"
 	"studentApi/repository"
@@ -25,6 +27,8 @@ func main() {
 			service.NewCourseService,       // *CourseService
 			handler.NewStudentHandler,       // *StudentHandler
 			handler.NewCourseHandler,        // *CourseHandler
+			auth.NewAuthService,
+			auth.NewAuthHandler,
 			gin.Default,                     // *gin.Engine
 		),
 		fx.Invoke(
