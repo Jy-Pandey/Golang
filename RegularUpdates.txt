@@ -1,3 +1,6 @@
+4&*S4qbqr%8S6aM=
+jyotiappperfect_gs - password chat
+NewRecruit#20@25 - webmail
 Day : 1
 Basic introduction to Go (Golang) and its features
 Installation of Go and setting up the environment
@@ -85,7 +88,59 @@ Day-9
 2. Learned how to connect students and courses using a join table and used SQL joins to fetch enrolled course data.
 3. Started learning authentication using JWT tokens and how to securely store passwords with bcrypt.
 
+// Status codes
+
+| Category        | Code Range | Meaning                   |
+| --------------- | ---------- | ------------------------- |
+| ✅ Success      | 200–299    | Request succeeded         |
+| ⚠️ Client Error | 400–499    | Client sent a bad request |
+| 🚨 Server Error | 500–599    | Backend server failed     |
 
 
+| Code | Name                  | Meaning                                | Use Case                          |
+| ---- | --------------------- | -------------------------------------- | --------------------------------- |
+| 200  | OK                    | Request successful                     | GET, PUT success                  |
+| 201  | Created               | Resource successfully created          | POST (create new student/book)    |
+| 204  | No Content            | Request success, no content to return  | DELETE success                    |
+| 400  | Bad Request           | Client sent invalid/missing data       | Wrong JSON format, missing fields |
+| 401  | Unauthorized          | Not logged in / Invalid token          | JWT token missing or wrong        |
+| 403  | Forbidden             | Logged in but not allowed to access    | Accessing someone else's data     |
+| 404  | Not Found             | Resource does not exist                | Student ID doesn't exist          |
+| 409  | Conflict              | Duplicate or conflicting request       | Email already exists              |
+| 500  | Internal Server Error | Backend code crashed or database error | DB offline, panic, etc.           |
+
+
+Day - 10
+
+1. Created a project where users can sign up and log in using JWT tokens, and protected routes using authentication middleware.
+2. Learned how to send JWT tokens in two ways: using Authorization headers and using cookies for browser-based apps.
+3. Understood how middleware works to verify tokens and restrict access to authenticated users only.
+
+BindJson() 
+- Internally calls MustBindWith() which aborts the request and sends a 400 Bad Request if there's any error during binding.
+- Use this when you want to automatically reject bad input.
+if err := c.BindJSON(&myStruct); err != nil {
+    // This line might not even run, because Gin already aborted the request
+}
+
+ShouldBindJson()
+- Internally calls ShouldBindWith() and returns an error instead of aborting.
+- You’re responsible for checking the error and deciding what to do.
+- Use this when you want more control over error handling.
+if err := c.ShouldBindJSON(&myStruct); err != nil {
+    c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+    return
+}
+
+# What is a Model?
+A model is a Go struct that represents a table in the database.
+Each field = column in SQL.
+
+
+Day - 11
+1. Learned about context.Context in Go – how it's used for timeouts, cancellations.
+2. Practiced writing raw SQL-like queries using GORM – including filtering, joins, grouping, and using Scan() with custom structs.
+3. Explored the Gin framework in detail – learned how to use routes, groups, middleware, query parameters, and static file handling.
+4. Learned how to upload media files (like images) to our local server using Gin's FormFile() and SaveUploadedFile() methods.
 
 
